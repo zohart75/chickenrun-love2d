@@ -14,7 +14,7 @@ function makeUI(dt)
     local ip = suit.Input(inputip, {font = assets.fonts["Button"], align = "center", valign = "top"}, x - 125, y + 12.5 + 5, 250, 40)
 
     if suit.Button("Host", {font = assets.fonts["Button"], align = "center", valign = "center"}, x - 125, y - 12.5, 250 / 2 - 2.5, 25).hit then
-      if love.window.showMessageBox("Warning!", "You're hosting server!\nThe game window will disappear and host will run in the background. Be sure to run game with lovec.exe!", {"Continue", "Stop"}) == 1 then
+      if love.window.showMessageBox("Warning!", "You're hosting server!\nThe game window will disappear and host will run in the background. Be sure to run game with game_console.bat!", {"Continue", "Stop"}) == 1 then
         love.window.close()
         server.Host(inputip.text)
         connection = "host"
